@@ -1,0 +1,614 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive HTML Email</title>
+	<style type="text/css">
+        :root{
+            --bodyBackground: #F3EEF2;
+            --sectionColor: #FFFFFF;
+            --bannerColor: #ECD9F7;
+            --textColor: #3B264D;
+            --btnColor: #FE6B07;
+            --card1Color: #FAE6E7;
+            --card2Color: #FFDCC6;
+            --card3Color: #DDE8FA;
+            --footerColor: #DED5E6;
+        }
+		body {
+			Margin: 0;
+			margin: 0;
+			padding: 0;
+			background-color: var(--bodyBackground);
+		}
+		table {
+			border-spacing: 0;
+		}
+		td {
+			padding: 0;
+		}
+		img {
+			border: 0;
+		}
+        .main{
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: var(--sectionColor);
+        }
+        .wrapper{
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        a{
+            text-decoration: none;
+        }
+        .btnBanner{
+            color: var(--sectionColor);
+            background-color: var(--btnColor);
+            padding: 15px 30px;
+            border-radius: 50px;
+        }
+        .menu{
+          display: none;
+        }
+        .menu:nth-child(1){
+          display: flex;
+        }
+        .menu:nth-child(2){
+          display: flex;
+        }
+        .menu:nth-child(3){
+          display: flex;
+        }
+        .two-column{
+            width: 100%;
+            display: flex;
+        }
+        .column img{
+            position: relative;
+            bottom: 55px;
+        }
+        .btnPrice{
+            display: flex;
+            gap: 10px;
+        }
+        .cardBtn{
+            color: var(--sectionColor);
+            background-color: var(--btnColor);
+            padding: 15px 20px;
+            border-radius: 20px;
+        }
+        .content2{
+            order: 2;
+        }
+        .contentImg2{
+            order: 1;
+        }
+        .fullMenu{
+            color: var(--btnColor);
+            background-color: transparent;
+            border: 1px solid var(--btnColor);
+            border-radius: 20px;
+            padding: 20px 60px;
+        }
+        .ft{
+           width: 100%;
+           /* background-color: aqua; */
+           display: flex;
+           gap: 10px; 
+           padding-top: 20px;
+           padding-bottom: 20px;
+        }
+        .ftImg{
+            position: relative;
+            left: 25px;
+        }
+        .scanDeteils{
+            position: relative;
+            left: 25px;
+        }
+        .test-twoColumn{
+            width: 100%;
+            display: flex;
+            gap: 20px;
+        }
+
+		@media screen and (max-width: 600px) { 
+        .wrapper{
+            max-width: 300px !important;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .two-column{
+            flex-direction: column !important;
+        }
+        .column img{
+            position: relative;
+            bottom: 0px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        .column p{
+            padding-left: 50px;
+        }
+        .column .btnPrice{
+            padding-left: 50px;
+        }
+        .content1, .content3{
+            order: 2;
+        }
+        .contentImg1, .contentImg3{
+            order: 1;
+        }
+        .ftImg{
+            position: relative;
+            left: 10px;
+        }
+        .scanDeteils{
+            position: relative;
+            left: 10px;
+        }
+        .test-twoColumn{
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }    
+		}
+		/* @media screen and (max-width: 400px) {
+
+		} */
+	</style>
+</head>
+<body>
+
+        <table class="main">
+            <tr>
+                <td>
+                  <table class="wrapper">
+                    <tr>
+                        <td style="text-align: center;">
+                          <a href="#"><img src="images/Logo.png" 
+                            alt="Logo" title="Logo" width="146"></a>  
+                        </td>
+                    </tr>
+                  </table> 
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td style="background-color: var(--bannerColor);">
+                  <table class="wrapper">
+                    <tr>
+                      <td style="text-align: center;">
+                        <p style="font-size: 17px; font-weight: bold; color: var(--btnColor); margin: 0; padding: 0; margin-top: 60px;">We Are Back</p>
+                        <p style="font-size: 30px; font-weight: bold; color: var(--textColor); text-align: center; margin: 0; padding: 0;">Enjoy variety<br>of food</p>
+                      </td>
+                    </tr>
+                  </table>
+                  <table width="100%">
+                    <tr>
+                      <td style="text-align: center; padding-bottom: 30px;">
+                        <img src="images/food1.5.png" 
+                        alt="Banner" title="banner" width="100%" style="max-width: 584px;">
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="wrapper">
+                    <tr>
+                      <td style="text-align: center;">
+                        <a href="#" class="btnBanner">Order Now</a>
+                        <p style="font-size: 17px; color: var(--textColor); font-weight: lighter; margin-top: 25px; padding-bottom: 30px;">30% off on your first Order <span style="font-weight: bold;">Use Code</span> <span style="color: var(--btnColor); font-weight: bold;">3890</span></p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+            </tr>
+
+
+
+            <tr>
+              <td>
+                <table class="wrapper">
+                   <tr>
+                    <td style="padding-top: 40px; padding-bottom: 40px;">
+                      <table width="100%">
+                        <tr>
+                          <td style="text-align: center;">
+                            <p style="margin: 0; padding: 0; font-size: 17px; font-weight: bold; color: var(--textColor);">from menu</p>
+                            <p style="margin: 0; padding: 0; text-align: center; font-size: 30px; font-weight: bold; color: var(--textColor); margin-top: 10px;">Beautifull<br>Crafted Dishes</p>
+                          </td>
+                        </tr>
+                      </table>
+                      <table width="100%" class="menuContent">
+                        <tr>
+                          <td>
+                            <table width="100%" style="background-color: var(--card1Color); border-radius: 20px; margin-top: 25px;" class="menu">
+                              <tr>
+                                <td class="two-column">
+                                  <table class="content1">
+                                      <tr>
+                                        <td style="padding-top: 25px; padding-left: 10px; padding-right: 10px; padding-bottom: 25px;" class="column">
+                                          <p style="font-size: 17px; font-weight: bold; color: var(--textColor);">Pork Lettuce<br>Cups</p>
+                                          <p style="font-size: 15px; color: var(--textColor); padding-bottom: 15px;">
+                                           Lorem ipsum dolor sit amet consectetur 
+                                           adipisicing elit. Iure facere pariatur 
+                                           iusto autem minus delectus fugit eos 
+                                           tempore nostrum aliquid   
+                                          </p>
+                                          <div class="btnPrice">
+                                           <a href="#" class="cardBtn">Order Now</a>
+                                           <p style="font-size: 15px; font-weight: bold; color: var(--textColor);">Ksh 3000</p>   
+                                          </div>
+                                        </td>
+                                      </tr>
+                                  </table>
+                                  <table class="contentImg1">
+                                      <tr>
+                                        <td style="padding-right: 10px;" class="column">
+                                           <img src="images/food2.png" 
+                                           alt="Pork" title="pork" width="200">
+                                        </td>
+                                      </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            <table width="100%" style="background-color: var(--card2Color); border-radius: 20px; margin-top: 25px;" class="menu">
+                              <tr>
+                                <td class="two-column">
+                                  <table class="content2">
+                                      <tr>
+                                        <td style="padding-top: 25px; padding-left: 10px; padding-right: 0px; padding-bottom: 25px;" class="column">
+                                          <p style="font-size: 17px; font-weight: bold; color: var(--textColor);">Beef Over Curry<br>Spiced Rice</p>
+                                          <p style="font-size: 15px; color: var(--textColor); padding-bottom: 15px;">
+                                           Lorem ipsum dolor sit amet consectetur 
+                                           adipisicing elit. Iure facere pariatur 
+                                           iusto autem minus delectus fugit eos 
+                                           tempore nostrum aliquid   
+                                          </p>
+                                          <div class="btnPrice">
+                                           <a href="#" class="cardBtn">Order Now</a>
+                                           <p style="font-size: 15px; font-weight: bold; color: var(--textColor);">Ksh 3000</p>   
+                                          </div>
+                                        </td>
+                                      </tr>
+                                  </table>
+                                  <table class="contentImg2">
+                                      <tr>
+                                        <td style="padding-right: 20px; padding-left: 10px;" class="column">
+                                           <img src="images/food3.png" 
+                                           alt="Pork" title="pork" width="200">
+                                        </td>
+                                      </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            <table width="100%" style="background-color: var(--card3Color); border-radius: 20px; margin-top: 25px;" class="menu">
+                              <tr>
+                                <td class="two-column">
+                                  <table class="content3">
+                                      <tr>
+                                        <td style="padding-top: 25px; padding-left: 10px; padding-right: 10px; padding-bottom: 25px;" class="column">
+                                          <p style="font-size: 17px; font-weight: bold; color: var(--textColor);">Coconut Chicken<br>Curry</p>
+                                          <p style="font-size: 15px; color: var(--textColor); padding-bottom: 15px;">
+                                           Lorem ipsum dolor sit amet consectetur 
+                                           adipisicing elit. Iure facere pariatur 
+                                           iusto autem minus delectus fugit eos 
+                                           tempore nostrum aliquid   
+                                          </p>
+                                          <div class="btnPrice">
+                                           <a href="#" class="cardBtn">Order Now</a>
+                                           <p style="font-size: 15px; font-weight: bold; color: var(--textColor);">Ksh 2000</p>   
+                                          </div>
+                                        </td>
+                                      </tr>
+                                  </table>
+                                  <table class="contentImg3">
+                                      <tr>
+                                        <td style="padding-right: 10px;" class="column">
+                                           <img src="images/food4.png" 
+                                           alt="Pork" title="pork" width="200">
+                                        </td>
+                                      </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            <!-- load more menu content-->
+                            <table width="100%" style="background-color: var(--card1Color); border-radius: 20px; margin-top: 25px;" class="menu">
+                              <tr>
+                                <td class="two-column">
+                                  <table class="content1">
+                                      <tr>
+                                        <td style="padding-top: 25px; padding-left: 10px; padding-right: 10px; padding-bottom: 25px;" class="column">
+                                          <p style="font-size: 17px; font-weight: bold; color: var(--textColor);">Pork Lettuce<br>Cups</p>
+                                          <p style="font-size: 15px; color: var(--textColor); padding-bottom: 15px;">
+                                           Lorem ipsum dolor sit amet consectetur 
+                                           adipisicing elit. Iure facere pariatur 
+                                           iusto autem minus delectus fugit eos 
+                                           tempore nostrum aliquid   
+                                          </p>
+                                          <div class="btnPrice">
+                                           <a href="#" class="cardBtn">Order Now</a>
+                                           <p style="font-size: 15px; font-weight: bold; color: var(--textColor);">Ksh 3000</p>   
+                                          </div>
+                                        </td>
+                                      </tr>
+                                  </table>
+                                  <table class="contentImg1">
+                                      <tr>
+                                        <td style="padding-right: 10px;" class="column">
+                                           <img src="images/food2.png" 
+                                           alt="Pork" title="pork" width="200">
+                                        </td>
+                                      </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            <table width="100%" style="background-color: var(--card2Color); border-radius: 20px; margin-top: 25px;" class="menu">
+                              <tr>
+                                <td class="two-column">
+                                  <table class="content2">
+                                      <tr>
+                                        <td style="padding-top: 25px; padding-left: 10px; padding-right: 0px; padding-bottom: 25px;" class="column">
+                                          <p style="font-size: 17px; font-weight: bold; color: var(--textColor);">Beef Over Curry<br>Spiced Rice</p>
+                                          <p style="font-size: 15px; color: var(--textColor); padding-bottom: 15px;">
+                                           Lorem ipsum dolor sit amet consectetur 
+                                           adipisicing elit. Iure facere pariatur 
+                                           iusto autem minus delectus fugit eos 
+                                           tempore nostrum aliquid   
+                                          </p>
+                                          <div class="btnPrice">
+                                           <a href="#" class="cardBtn">Order Now</a>
+                                           <p style="font-size: 15px; font-weight: bold; color: var(--textColor);">Ksh 3000</p>   
+                                          </div>
+                                        </td>
+                                      </tr>
+                                  </table>
+                                  <table class="contentImg2">
+                                      <tr>
+                                        <td style="padding-right: 20px; padding-left: 10px;" class="column">
+                                           <img src="images/food3.png" 
+                                           alt="Pork" title="pork" width="200">
+                                        </td>
+                                      </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            <table width="100%" style="background-color: var(--card3Color); border-radius: 20px; margin-top: 25px;" class="menu">
+                              <tr>
+                                <td class="two-column">
+                                  <table class="content3">
+                                      <tr>
+                                        <td style="padding-top: 25px; padding-left: 10px; padding-right: 10px; padding-bottom: 25px;" class="column">
+                                          <p style="font-size: 17px; font-weight: bold; color: var(--textColor);">Coconut Chicken<br>Curry</p>
+                                          <p style="font-size: 15px; color: var(--textColor); padding-bottom: 15px;">
+                                           Lorem ipsum dolor sit amet consectetur 
+                                           adipisicing elit. Iure facere pariatur 
+                                           iusto autem minus delectus fugit eos 
+                                           tempore nostrum aliquid   
+                                          </p>
+                                          <div class="btnPrice">
+                                           <a href="#" class="cardBtn">Order Now</a>
+                                           <p style="font-size: 15px; font-weight: bold; color: var(--textColor);">Ksh 2000</p>   
+                                          </div>
+                                        </td>
+                                      </tr>
+                                  </table>
+                                  <table class="contentImg3">
+                                      <tr>
+                                        <td style="padding-right: 10px;" class="column">
+                                           <img src="images/food4.png" 
+                                           alt="Pork" title="pork" width="200">
+                                        </td>
+                                      </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            <!-- /load more menu content-->
+                          </td>
+                        </tr>
+                      </table>
+                      <table width="100%" style=" margin-top: 40px;">
+                        <tr>
+                          <td style="text-align: center;">
+                            <a href="#" class="fullMenu">Load more</a>
+                          </td>
+                        </tr>
+                      </table>    
+                    </td>
+                   </tr> 
+                </table>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td>
+                <table class="wrapper">
+                   <tr>
+                    <td style="padding-top: 40px; padding-bottom: 40px; text-align: center;">
+                      <p style="margin: 0; padding: 0; font-size: 17px; font-weight: bold; color: var(--textColor);">scan the code &</p>
+                      <p style="margin: 0; padding-top: 5px; font-size: 30px; font-weight: bold; text-align: center; color: var(--textColor);">Get 40% extra on<br>first order through App</p>
+                      <a href="#"><img src="images/Qr.png" 
+                        alt="QrCode" title="QrCode" width="180" style="margin: 0px; position: relative; top: 80px;"></a>
+                    </td>
+                   </tr> 
+                </table>
+              </td>
+            </tr>
+            
+            
+
+            <tr>
+              <td style="background-color: var(--footerColor); padding-top: 100px; padding-bottom: 40px;">
+                <table class="wrapper">
+                    <tr>
+                      <td>
+                        <table width="100%">
+                           <tr>
+                            <td class="features">
+                              <table width="100%">
+                                <tr>
+                                  <td class="ft">
+                                    <img src="images/Qrcode.png" 
+                                    alt="image" title="Qrcode" width="60" height="60" class="ftImg">
+                                    <div class="scanDeteils">
+                                        <p style="margin: 0; padding: 0; font-size: 17px; font-weight: bold; color: var(--textColor);">Scan the Code</p>
+                                        <p style="margin: 0; padding: 0; margin-top: 10px; font-size: 15px; color: var(--textColor);">
+                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                         Iure facere pariatur iusto autem minus   
+                                        </p>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                              <table width="100%">
+                                <tr>
+                                  <td class="ft">
+                                    <img src="images/download.png" 
+                                    alt="image" title="Qrcode" width="60" height="60" class="ftImg">
+                                    <div class="scanDeteils">
+                                        <p style="margin: 0; padding: 0; font-size: 17px; font-weight: bold; color: var(--textColor);">Download App</p>
+                                        <p style="margin: 0; padding: 0; margin-top: 10px; font-size: 15px; color: var(--textColor);">
+                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                         Iure facere pariatur iusto autem minus   
+                                        </p>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                              <table width="100%">
+                                <tr>
+                                  <td class="ft">
+                                    <img src="images/Cart.png" 
+                                    alt="image" title="Qrcode" width="60" height="60" class="ftImg">
+                                    <div class="scanDeteils">
+                                        <p style="margin: 0; padding: 0; font-size: 17px; font-weight: bold; color: var(--textColor);">Order through App</p>
+                                        <p style="margin: 0; padding: 0; margin-top: 10px; font-size: 15px; color: var(--textColor);">
+                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                         Iure facere pariatur iusto autem minus   
+                                        </p>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                           </tr> 
+                        </table>
+                        <table width="100%">
+                            <tr>
+                              <td style="text-align: center;">
+                                <img src="images/Line 1.png" 
+                                alt="lineImg" style="margin-top: 20px; margin-bottom: 20px;">
+                                <p style="font-size: 17px; font-weight: bold; margin-bottom: 20px;">OR</p>
+                                <p style="font-size: 15px; margin-bottom: 20px;">Download App from</p>
+                                <div class="logoStore">
+                                    <a href="#"><img src="images/ap.png" 
+                                        alt="Appstore"></a>
+                                    <a href="#"><img src="images/gg.png" alt=""></a>    
+                                </div>
+                              </td>
+                            </tr>
+                        </table>
+                        <table width="100%" style="margin-top: 30px;">
+                            <tr>
+                              <td>
+                                <table width="100%" style="margin-top: 50px;">
+                                    <tr>
+                                      <td style="text-align: center;">
+                                        <p style="margin: 0; font-size: 17px; font-weight: bold; color: var(--textColor);">what people says</p>
+                                        <p style="margin: 0; font-size: 30px; font-weight: bold; color: var(--textColor);">Testimonials</p>
+                                      </td>
+                                    </tr>
+                                </table>
+                                <table width="100%" style="margin-top: 30px; padding-bottom: 200px;">
+                                    <tr>
+                                      <td class="test-twoColumn">
+                                        <table>
+                                            <tr>
+                                             <td>
+                                               <img src="images/Testimonial.png" 
+                                               alt="image" title="user" width="232"> 
+                                             </td>
+                                            </tr>
+                                        </table>
+                                        <table>
+                                            <tr>
+                                              <td>
+                                                <p style="font-size: 15px; font-weight: bold; color: var(--textColor);">
+                                                    "Lorem ipsum dolor sit amet 
+                                                    consectetur adipisicing elit. 
+                                                    Iure facere pariatur iusto 
+                                                    autem minus delectus fugit 
+                                                    eos tempore nostrum aliquid 
+                                                    aliquam nobis, aperiam"       
+                                                </p>
+                                                <p style="font-size: 15px; font-weight: bold; color: var(--textColor);">John Doe</p>
+                                                <p style="font-size: 15px; color: var(--textColor);">Head of customer relation</p>
+                                              </td>
+                                            </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                </table>
+                                <table width="100%">
+                                    <tr>
+                                      <td style="text-align: center;">
+                                        <table width="100%" style="padding-bottom: 10px;">
+                                            <tr>
+                                              <td class="icons">
+                                                <a href="#"><img src="images/facebook.png" alt="facebook" title="facebook" width="30" style="padding: 10px;"></a>
+                                                <a href="#"><img src="images/twitter.png" alt="twitter" title="twitter" width="30" style="padding: 10px;"></a>
+                                                <a href="#"><img src="images/youtube.png" alt="youtube" title="youtube" width="30" style="padding: 10px;"></a>
+                                                <a href="#"><img src="images/instagram.png" alt="instagram" title="instagram" width="30" style="padding: 10px;"></a>
+                                                <a href="#"><img src="images/linkedin.png" alt="LinkedIn" title="LinkedIn" width="30" style="padding: 10px;"></a>
+                                              </td>
+                                            </tr>
+                                        </table>
+                                        <p style="font-size: 15px; font-weight: bold; color: var(--textColor); padding-bottom: 40px;">123 Street Road, City, State 555555</p>
+                                        <p style="font-size: 15px; color: var(--textColor);">Unsubscribe Terms & Services Contuct Us</p>
+                                      </td>
+                                    </tr>
+                                </table>
+                              </td>
+                            </tr>
+                        </table>
+                      </td>
+                    </tr>
+                </table>
+              </td>
+            </tr>
+
+        </table>
+
+      <script>
+        let menu = document.querySelectorAll('.menu');
+        let menuBtn = document.querySelector('.fullMenu');
+        let currentImg = 3;
+        menuBtn.addEventListener('click',
+        function(e){
+          e.preventDefault();
+          for(let i = currentImg; i<currentImg+3; i++){
+             if(menu[i]){
+               menu[i].style.display = 'flex';
+             }
+          }
+          currentImg+= 3;
+          if(currentImg>=menu.length){ // for removing the button after the all images are displayed
+            e.target.style.display = 'none'
+          }
+        })
+      </script>
+</body>
+</html>
