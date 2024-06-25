@@ -56,37 +56,59 @@
           display: none;
         }
         .menu:nth-child(1){
-          display: flex;
+          display: block;
         }
         .menu:nth-child(2){
-          display: flex;
+          display: block;
         }
         .menu:nth-child(3){
-          display: flex;
+          display: block;
         }
         .two-column{
             width: 100%;
-            display: flex;
+            /* display: flex; */
+        }
+        .two-column .content1{
+            width: 240px;
+            display: inline-block;
+        }
+        .two-column .contentImg1{
+            display: inline-block;
+            margin-bottom: 50px;
+        }
+        .two-column .content2{
+            width: 240px;
+            display: inline-block;
+        }
+        .two-column .contentImg2{
+            display: inline-block;
+            margin-bottom: 50px;
+        }
+        .two-column .content3{
+            width: 240px;
+            display: inline-block;
+        }
+        .two-column .contentImg3{
+            display: inline-block;
+            margin-bottom: 50px;
         }
         .column img{
             position: relative;
             bottom: 55px;
         }
         .btnPrice{
-            display: flex;
-            gap: 10px;
+          width: 100%;
         }
         .cardBtn{
-            color: #FFFFFF;
-            background-color: #FE6B07;
-            padding: 15px 20px;
-            border-radius: 20px;
+          display: inline-block;
+          color: #FFFFFF;
+          background-color: #FE6B07;
+          padding: 15px 20px;
+          border-radius: 20px;
         }
-        .content2{
-            order: 2;
-        }
-        .contentImg2{
-            order: 1;
+        .price{
+          display: inline-block;
+          margin-left: 10px;
         }
         .fullMenu{
             color: #FE6B07;
@@ -95,26 +117,42 @@
             border-radius: 20px;
             padding: 20px 60px;
         }
+        .QrCode{
+            margin: 0px;
+            position: relative;
+            top: 100px;
+        }
         .ft{
            width: 100%;
            /* background-color: aqua; */
-           display: flex;
-           gap: 10px; 
-           padding-top: 20px;
-           padding-bottom: 20px;
+           /* display: flex;
+           gap: 10px;  */
+           /* padding-top: 20px;
+           padding-bottom: 20px; */
         }
         .ftImg{
-            position: relative;
-            left: 25px;
+            width: 60px;
+            display: inline-block;
+            margin-left: 20px;
+            margin-bottom: 20px;
         }
         .scanDeteils{
-            position: relative;
-            left: 25px;
+          width: 368px;
+          display: inline-block;
+          padding-left: 20px;
+          margin-bottom: 20px;
         }
         .test-twoColumn{
             width: 100%;
-            display: flex;
-            gap: 20px;
+        }
+        .test-twoColumn .column-img{
+          width: 232px;
+          display: inline-block;
+        }
+        .test-twoColumn .column-msg{
+          width: 209px;
+          display: inline-block;
+          margin-left: 20px;
         }
 
 		@media screen and (max-width: 600px) { 
@@ -123,42 +161,81 @@
             width: 100% !important;
             margin: 0 auto !important;
         }
-        .two-column{
-            width: 100% !important;
-            flex-direction: column !important;
+        .two-column .content1{
+            width: 240px;
+            display: block !important;
+            margin-left: 30px !important;
         }
-        .column img{
+        .two-column .contentImg1{
+            display: block !important;
+            margin-bottom: 0px !important;
+            margin-top: 70px !important;
+            margin-left: 50px !important;
+        }
+        .two-column .content2{
+            width: 240px;
+            display: block !important;
+            margin-left: 30px !important;
+        }
+        .two-column .contentImg2{
+            display: block !important;
+            margin-bottom: 0px !important;
+            margin-top: 70px !important;
+            margin-left: 50px !important;
+        }
+        .two-column .content3{
+            width: 240px;
+            display: block !important;
+            margin-left: 30px !important;
+        }
+        .two-column .contentImg3{
+            display: block !important;
+            margin-bottom: 0px !important;
+            margin-top: 70px !important;
+            margin-left: 50px !important;
+        }
+        /* .column img{
             position: relative !important;
             bottom: 0px !important;
             padding-left: 50px !important;
             padding-right: 50px !important;
-        }
-        .column p{
+        } */
+        /* .column p{
             padding-left: 50px !important;
-        }
+        } */
         .column .btnPrice{
-            padding-left: 50px !important;
+            padding-left: 0px !important;
         }
-        .content1, .content3{
-            order: 2 !important;
+        .cardBtn{
+          display: inline-block;
+          color: #FFFFFF;
+          background-color: #FE6B07;
+          padding: 15px 20px;
+          border-radius: 20px;
         }
-        .contentImg1, .contentImg3{
-            order: 1 !important;
+        .price{
+          display: inline-block;
+          margin-left: 5px !important;
         }
         .ftImg{
-            position: relative !important;
-            left: 10px !important;
+            width: 40px !important;
+            height: 40px !important;
+            margin-right: 10px !important;
         }
         .scanDeteils{
-            position: relative !important;
-            left: 10px !important;
+          width: 213px !important;
+          display: inline-block !important;
+          padding-left: 0px;
+          margin-bottom: 20px !important;
         }
-        .test-twoColumn{
-            width: 100% !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 20px !important;
-        }    
+        .test-twoColumn .column-img{
+          display: block !important;
+          margin-left: 30px;
+        }
+        .test-twoColumn .column-msg{
+          display: block !important;
+          margin-left: 40px !important;
+        }   
 		}
 		/* @media screen and (max-width: 400px) {
 
@@ -205,7 +282,7 @@
                     <tr>
                       <td style="text-align: center;">
                         <a href="#" class="btnBanner">Order Now</a>
-                        <p style="font-size: 17px; color: #3B264D; font-weight: lighter; margin-top: 25px; padding-bottom: 30px;">30% off on your first Order <span style="font-weight: bold;">Use Code</span> <span style="color: var(--btnColor); font-weight: bold;">3890</span></p>
+                        <p style="font-size: 17px; color: #2c0250; font-weight: lighter; margin-top: 25px; padding-bottom: 30px;">30% off on your first Order <span style="font-weight: bold;">Use Code</span> <span style="color: #FE6B07; font-weight: bold;">3890</span></p>
                       </td>
                     </tr>
                   </table>
@@ -245,7 +322,7 @@
                                           </p>
                                           <div class="btnPrice">
                                            <a href="#" class="cardBtn">Order Now</a>
-                                           <p style="font-size: 15px; font-weight: bold; color: #3B264D;">Ksh 3000</p>   
+                                           <p style="font-size: 15px; font-weight: bold; color: #3B264D;" class="price">Ksh 3000</p>   
                                           </div>
                                         </td>
                                       </tr>
@@ -276,7 +353,7 @@
                                           </p>
                                           <div class="btnPrice">
                                            <a href="#" class="cardBtn">Order Now</a>
-                                           <p style="font-size: 15px; font-weight: bold; color: #3B264D;">Ksh 3000</p>   
+                                           <p style="font-size: 15px; font-weight: bold; color: #3B264D;" class="price">Ksh 3000</p>   
                                           </div>
                                         </td>
                                       </tr>
@@ -307,7 +384,7 @@
                                           </p>
                                           <div class="btnPrice">
                                            <a href="#" class="cardBtn">Order Now</a>
-                                           <p style="font-size: 15px; font-weight: bold; color: #3B264D;">Ksh 2000</p>   
+                                           <p style="font-size: 15px; font-weight: bold; color: #3B264D;" class="price">Ksh 2000</p>   
                                           </div>
                                         </td>
                                       </tr>
@@ -339,7 +416,7 @@
                                           </p>
                                           <div class="btnPrice">
                                            <a href="#" class="cardBtn">Order Now</a>
-                                           <p style="font-size: 15px; font-weight: bold; color: #3B264D;">Ksh 3000</p>   
+                                           <p style="font-size: 15px; font-weight: bold; color: #3B264D;" class="price">Ksh 3000</p>   
                                           </div>
                                         </td>
                                       </tr>
@@ -370,7 +447,7 @@
                                           </p>
                                           <div class="btnPrice">
                                            <a href="#" class="cardBtn">Order Now</a>
-                                           <p style="font-size: 15px; font-weight: bold; color: #3B264D;">Ksh 3000</p>   
+                                           <p style="font-size: 15px; font-weight: bold; color: #3B264D;" class="price">Ksh 3000</p>   
                                           </div>
                                         </td>
                                       </tr>
@@ -401,7 +478,7 @@
                                           </p>
                                           <div class="btnPrice">
                                            <a href="#" class="cardBtn">Order Now</a>
-                                           <p style="font-size: 15px; font-weight: bold; color: #3B264D;">Ksh 2000</p>   
+                                           <p style="font-size: 15px; font-weight: bold; color: #3B264D;" class="price">Ksh 2000</p>   
                                           </div>
                                         </td>
                                       </tr>
@@ -443,7 +520,7 @@
                       <p style="margin: 0; padding: 0; font-size: 17px; font-weight: bold; color: var(--textColor);">scan the code &</p>
                       <p style="margin: 0; padding-top: 5px; font-size: 30px; font-weight: bold; text-align: center; color: #3B264D;">Get 40% extra on<br>first order through App</p>
                       <a href="#"><img src="https://i.ibb.co/28HR9sM/Qr.png" 
-                        alt="QrCode" title="QrCode" width="180" style="margin: 0px; position: relative; top: 80px;"></a>
+                        alt="QrCode" title="QrCode" width="180" class="QrCode"></a>
                     </td>
                    </tr> 
                 </table>
@@ -537,7 +614,7 @@
                                 <table width="100%" style="margin-top: 30px; padding-bottom: 200px;">
                                     <tr>
                                       <td class="test-twoColumn">
-                                        <table>
+                                        <table class="column-img">
                                             <tr>
                                              <td>
                                                <img src="https://i.ibb.co/Jy3hL3t/Testimonial.png" 
@@ -545,7 +622,7 @@
                                              </td>
                                             </tr>
                                         </table>
-                                        <table>
+                                        <table class="column-msg">
                                             <tr>
                                               <td>
                                                 <p style="font-size: 15px; font-weight: bold; color: #3B264D;">
